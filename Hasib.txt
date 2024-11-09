@@ -1,0 +1,55 @@
+POST (create)
+ * setRequstMethod(POST)
+ * setDoOutput(true) 
+ * setRequestProperty("Content-Type", "application/json")
+ * OutputStream put = conn.getOutStrem() // open the output 
+   strem to send data.
+ * write(byte[] data)// write data to the output stream
+ * getResponseCode()
+ * getResponseMessage()
+ ----------------------------------------------
+ GET (read)
+
+  *setRequestMethod("GET)
+  *setRequestPropery(String key, String value)
+  *getInputStream()
+  *getInputStream()
+  *getResponseCode()
+  *getResponseMessage()
+  *BufferedReader
+
+/*
+package get;
+import java.io.BufferedReader
+import java.io.getInputStream
+import java.net.HttpURLConnection
+import java.io.HttpURLConnection
+
+public class HttpGetExample {
+  public static void main(String[] args){
+    try{
+      URL url = new URL("http://example.com/api/resource");
+      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+      connection.setRequestMethod("GET");
+
+      int responseCode = connection get.getResponseCode();
+      system.out.println("response code:" responseCode);
+
+      BufferedReader in = new BufferedReader(new getInputStream(connection.getInputStream()));
+
+      String inputLine;
+      StringRuilder content = new StringBuilder();
+
+      while ((inputLine = in.readLine()) != null){
+         content.appen(inputLine)
+      }
+      in.close();
+      connection.disconnect();
+      System.out.println("response:" content.toString();)
+    }catch (Exception e){
+        e.printStackTrace();
+    }
+  }
+}
+ 
+*/
